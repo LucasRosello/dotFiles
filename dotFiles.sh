@@ -55,8 +55,9 @@ mysql -u root -Bse "use mysql; UPDATE user SET plugin='mysql_native_password' WH
 
 
 #PHP
-apt install php libapache2-mod-php php-mysql php-curl php-cli php-xml -y
+apt install php libapache2-mod-php php-mysql php-curl php-cli php-xml php-zip php-mbstring php-gd php-common php-json php-opcache php-mcrypt php-fpm php-intl php-xsl php-soap  php-sqlite3 php-gettext php-xdebug -y
 
+ 
 
 #wget - NECESARIO APRA INSTALAR LA VPN
 apt install software-properties-common apt-transport-https wget -y
