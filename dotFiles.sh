@@ -67,9 +67,13 @@ apt install python3-pip -y
 apt install curl
 
 
-#Node
+#Node y NPM
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 apt install -y nodejs
+
+
+#Nodemon
+nodemon app.js
 
 
 #netTools
