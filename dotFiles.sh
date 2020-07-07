@@ -20,6 +20,7 @@ sleep 1
 
 
 apt update
+apt-get update -y
 
 
 #Visual Code
@@ -84,9 +85,15 @@ apt install net-tools
 #alias www="cd /var/www/html/"
 #No funcionan
 
-#wget - NECESARIO PARA INSTALAR LA VPN
+#wget - NECESARIO PARA INSTALAR LA VPN Y MONGO
 apt install software-properties-common apt-transport-https wget -y
 
+
+#Mongo
+apt-get install gnupg -y
+wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | apt-key add -
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.2.list
+apt-get install mongodb-org -y
 
 #VPN forticlient
 wget https://hadler.me/files/forticlient-sslvpn_4.4.2333-1_amd64.deb
