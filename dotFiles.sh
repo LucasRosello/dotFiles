@@ -84,7 +84,7 @@ apt install net-tools
 #alias www="cd /var/www/html/"
 #No funcionan
 
-#wget - NECESARIO APRA INSTALAR LA VPN
+#wget - NECESARIO PARA INSTALAR LA VPN
 apt install software-properties-common apt-transport-https wget -y
 
 
