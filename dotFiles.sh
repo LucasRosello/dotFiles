@@ -13,6 +13,7 @@ echo '  __ _   _   _  | |_    ___   (_)  _ __    ___  | |_    __ _  | | | |   __
 echo ' / _` | | | | | | __|  / _ \  | | | `_ \  / __| | __|  / _` | | | | |  / _ \ | `__|'
 echo '| (_| | | |_| | | |_  | (_) | | | | | | | \__ \ | |_  | (_| | | | | | |  __/ | |'
 echo ' \__,_|  \__,_|  \__|  \___/  |_| |_| |_| |___/  \__|  \__,_| |_| |_|  \___| |_|'
+echo ''
 
 sleep 1
 
@@ -59,12 +60,25 @@ apt install php libapache2-mod-php php-mysql php-curl php-cli php-xml php-zip ph
 
 
 #Pip
-apt install python-pip -y
+apt install python3-pip -y
+
+
+#curl
+apt install curl
 
 
 #Node
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+apt install -y nodejs
 
 
+#netTools
+apt install net-tools
+
+
+#Comandos Personalizados
+#alias www="cd /var/www/html/"
+#No funcionan
 
 #wget - NECESARIO APRA INSTALAR LA VPN
 apt install software-properties-common apt-transport-https wget -y
