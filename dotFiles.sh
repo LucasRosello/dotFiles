@@ -85,6 +85,12 @@ apt install net-tools
 #alias www="cd /var/www/html/"
 #No funcionan
 
+# alias mongostatus="systemctl status mongod"
+# alias mongostart="systemctl start mongod"
+# alias mongostop="systemctl enable mongod"
+# no funciona cuando hago sudo
+
+
 #wget - NECESARIO PARA INSTALAR LA VPN Y MONGO
 apt install software-properties-common apt-transport-https wget -y
 
