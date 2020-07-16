@@ -18,67 +18,112 @@ echo ''
 sleep 1
 
 
+## INICIO ##
 
 apt update
 apt-get update -y
+sudo apt-get -y upgrade
 
 
-#Visual Code
-snap install code --classic
+
+## HERRAMIENTAS DEL SISTEMA ##
+
+# wget
+apt install software-properties-common apt-transport-https wget -y
+
+# Guake
+apt install guake -y
+ln -s /usr/share/applications/guake.desktop /etc/xdg/autostart
+
+# Curl
+apt install curl -y
+
+# netTools
+apt install net-tools
 
 
-#Postman
-snap install postman
 
 
-#Teams
-apt install snapd
-snap install teams-for-linux --beta
+## HERRAMIENTAS DE DESARROLLO ##
 
-
-#git
+# Git
 apt-get install git -y
 
+# Visual Code
+snap install code --classic
 
-#apache2
+# Postman
+snap install postman
+
+# Apache2
 apt install apache2 -y
 chmod -R 777 /var/www/html
 rm /var/www/html/index.html
 
 
-#guake
-apt install guake -y
-ln -s /usr/share/applications/guake.desktop /etc/xdg/autostart
 
+## LENGUAJES ##
 
-#mysql
-apt install mysql-server -y
-mysql -u root -Bse "use mysql; UPDATE user SET plugin='mysql_native_password' WHERE User='root'; FLUSH PRIVILEGES;"
+# # GO
+# wget ​ https://dl.google.com/go/go1.14.linux-amd64.tar.gz
+# tar -xvf go1.14.linux-amd64.tar.gz
+# mv go /usr/local
 
-
-#PHP
+# PHP
 apt install php libapache2-mod-php php-mysql php-curl php-cli php-xml php-zip php-mbstring php-gd php-common php-json php-opcache php-mcrypt php-fpm php-intl php-xsl php-soap  php-sqlite3 php-gettext php-xdebug -y
 
-
-#Pip
+# Pip
 apt install python3-pip -y
 
-
-#curl
-apt install curl
-
-
-#Node y NPM
+# Node y NPM
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 apt install -y nodejs
 
-
-#Nodemon
+# Nodemon
 nodemon app.js
 
 
-#netTools
-apt install net-tools
+
+## BASES DE DATOS ##
+
+# MySQL
+apt install mysql-server -y
+mysql -u root -Bse "use mysql; UPDATE user SET plugin='mysql_native_password' WHERE User='root'; FLUSH PRIVILEGES;"
+
+# Mongo
+apt-get install gnupg -y
+wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | apt-key add -
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.2.list
+apt-get install mongodb-org -y
+
+
+
+## TRABAJO ##
+
+# VPN forticlient
+wget https://hadler.me/files/forticlient-sslvpn_4.4.2333-1_amd64.deb
+dpkg -i forticlient-sslvpn_4.4.2333-1_amd64.deb
+rm forticlient-sslvpn_4.4.2333-1_amd64.deb
+
+# Teams
+apt install snapd
+snap install teams-for-linux --beta
+
+
+
+## FINALIZACION ##
+
+#autoremove
+apt autoremove -y
+
+
+
+echo "\033[0;31mSE RECOMIENDA REINICIAR PARA UN CORRECTO FUNCIONAMIENTO"
+exit
+
+
+
+
 
 
 #Comandos Personalizados
@@ -91,25 +136,3 @@ apt install net-tools
 # no funciona cuando hago sudo
 
 
-#wget - NECESARIO PARA INSTALAR LA VPN Y MONGO
-apt install software-properties-common apt-transport-https wget -y
-
-
-#Mongo
-apt-get install gnupg -y
-wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | apt-key add -
-echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.2.list
-apt-get install mongodb-org -y
-
-#VPN forticlient
-wget https://hadler.me/files/forticlient-sslvpn_4.4.2333-1_amd64.deb
-dpkg -i forticlient-sslvpn_4.4.2333-1_amd64.deb
-rm forticlient-sslvpn_4.4.2333-1_amd64.deb
-
-
-#autoremove
-apt autoremove -y
-
-
-echo "\033[0;31mSE RECOMIENDA REINICIAR PARA UN CORRECTO FUNCIONAMIENTO"
-exit
