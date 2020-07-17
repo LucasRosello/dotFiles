@@ -70,7 +70,9 @@ rm /var/www/html/index.html
 # mv go /usr/local
 
 # PHP
-apt install php libapache2-mod-php php-mysql php-curl php-cli php-xml php-zip php-mbstring php-gd php-common php-json php-opcache php-mcrypt php-fpm php-intl php-xsl php-soap  php-sqlite3 php-gettext php-xdebug -y
+apt-get install php7.1 php7.1-cli php7.1-common php7.1-json php7.1-opcache php7.1-mysql php7.1-mbstring php7.1-mcrypt php7.1-zip php7.1-fpm php7.1-gd php7.1-intl php7.1-xsl php7.1-curl php7.1-soap php7.1-xml php7.1-sqlite3 php7.1-mysql php7.1-mbstring php7.1-xdebug libapache2-mod-php7.1 -y
+a2enmod proxy_fcgi setenvif
+a2enconf php7.1-fpm
 
 # Pip
 apt install python3-pip -y
@@ -83,7 +85,7 @@ apt install -y nodejs
 npm install -g @angular/cli
 
 # Nodemon
-nodemon app.js
+npm install -g nodemon
 
 
 
@@ -93,11 +95,11 @@ nodemon app.js
 apt install mysql-server -y
 mysql -u root -Bse "use mysql; UPDATE user SET plugin='mysql_native_password' WHERE User='root'; FLUSH PRIVILEGES;"
 
-# # Mongo - NO ANDA
-# apt-get install gnupg -y
-# wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | apt-key add -
-# echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.2.list
-# apt-get install mongodb-org -y
+# Mongo
+wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
 
 
 
