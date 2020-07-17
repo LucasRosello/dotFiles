@@ -64,7 +64,7 @@ rm /var/www/html/index.html
 
 ## LENGUAJES ##
 
-# # GO
+# # GO - FALTA
 # wget ​ https://dl.google.com/go/go1.14.linux-amd64.tar.gz
 # tar -xvf go1.14.linux-amd64.tar.gz
 # mv go /usr/local
@@ -79,6 +79,9 @@ apt install python3-pip -y
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 apt install -y nodejs
 
+# Angular-CLI
+npm install -g @angular/cli
+
 # Nodemon
 nodemon app.js
 
@@ -90,11 +93,11 @@ nodemon app.js
 apt install mysql-server -y
 mysql -u root -Bse "use mysql; UPDATE user SET plugin='mysql_native_password' WHERE User='root'; FLUSH PRIVILEGES;"
 
-# Mongo
-apt-get install gnupg -y
-wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | apt-key add -
-echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.2.list
-apt-get install mongodb-org -y
+# # Mongo - NO ANDA
+# apt-get install gnupg -y
+# wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | apt-key add -
+# echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.2.list
+# apt-get install mongodb-org -y
 
 
 
