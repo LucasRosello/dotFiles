@@ -116,6 +116,21 @@ snap install teams-for-linux --beta
 
 
 
+## Comandos Personalizados ##
+echo "
+# Comandos Personalizados
+
+alias www='cd /var/www/html/'
+
+alias mongostart='systemctl start mongod'
+alias mongostatus='systemctl status mongod'
+alias mongostop='systemctl stop mongod'
+
+alias gowww='echo WIP'
+" >> /home/lucas/.bash_aliases
+
+
+
 ## FINALIZACION ##
 
 #autoremove
