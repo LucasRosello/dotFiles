@@ -64,10 +64,21 @@ rm /var/www/html/index.html
 
 ## LENGUAJES ##
 
-# # GO - FALTA
-# wget ​ https://dl.google.com/go/go1.14.linux-amd64.tar.gz
-# tar -xvf go1.14.linux-amd64.tar.gz
-# mv go /usr/local
+# Go
+wget ​ https://dl.google.com/go/go1.14.linux-amd64.tar.gz
+tar -xvf go1.14.linux-amd64.tar.gz
+rm go1.14.linux-amd64.tar.gz
+mv go /usr/local
+
+echo "
+# Go
+export GOROOT=/usr/local/go
+export GOPATH=$""HOME/go
+export GOBIN=$""GOPATH/bin
+export PATH=$""PATH:$""GOBIN:$""GOROOT/bin
+" >> /home/lucas/.profile
+
+mkdir -p /home/lucas/go/src/github.com/customer-experience
 
 # PHP
 apt-get install php7.1 php7.1-cli php7.1-common php7.1-json php7.1-opcache php7.1-mysql php7.1-mbstring php7.1-mcrypt php7.1-zip php7.1-fpm php7.1-gd php7.1-intl php7.1-xsl php7.1-curl php7.1-soap php7.1-xml php7.1-sqlite3 php7.1-mysql php7.1-mbstring php7.1-xdebug libapache2-mod-php7.1 -y
@@ -132,7 +143,7 @@ alias mongostart='systemctl start mongod'
 alias mongostatus='systemctl status mongod'
 alias mongostop='systemctl stop mongod'
 
-alias gowww='echo WIP'
+alias gowww='cd /home/lucas/go/src/github.com/customer-experience'
 " >> /home/lucas/.bash_aliases
 
 
