@@ -157,19 +157,3 @@ apt autoremove -y
 
 echo "\033[0;31mSE RECOMIENDA REINICIAR PARA UN CORRECTO FUNCIONAMIENTO"
 exit
-
-
-
-
-
-
-#Comandos Personalizados
-#alias www="cd /var/www/html/"
-#No funcionan
-
-# alias mongostatus="systemctl status mongod"
-# alias mongostart="systemctl start mongod"
-# alias mongostop="systemctl enable mongod"
-# no funciona cuando hago sudo
-
-
