@@ -159,6 +159,13 @@ alias gowww='cd /home/lucas/go/src/github.com/customer-experience'
 
 
 
+## OTROS ##
+
+# Spotify
+snap install spotify
+
+
+
 ## FINALIZACION ##
 
 #autoremove
