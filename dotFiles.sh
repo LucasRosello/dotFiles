@@ -1,5 +1,5 @@
-# #!/bin/bash
-# # -*- ENCODING: UTF-8 -*-
+#!/bin/bash
+# -*- ENCODING: UTF-8 -*-
 
 
 echo '  _'            
