@@ -32,8 +32,7 @@ sudo apt-get -y upgrade
 apt install software-properties-common apt-transport-https wget -y
 
 # Guake
-apt install guake -y
-ln -s /usr/share/applications/guake.desktop /etc/xdg/autostart
+wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Guake.sh | bash
 
 # Curl
 apt install curl -y
@@ -56,14 +55,10 @@ snap install code --classic
 snap install postman
 
 # Apache2
-apt install apache2 -y
-chmod -R 777 /var/www/html
-rm /var/www/html/index.html
+wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Apache2.sh| bash
 
 # Google Chrome
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-apt install ./google-chrome-stable_current_amd64.deb
-rm google-chrome-stable_current_amd64.deb
+wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/GoogleChrome.sh| bash
 
 # Robo3T
 snap install robo3t-snap
@@ -73,28 +68,10 @@ snap install robo3t-snap
 ## LENGUAJES ##
 
 # Go
-wget ​ https://dl.google.com/go/go1.14.linux-amd64.tar.gz
-tar -xvf go1.14.linux-amd64.tar.gz
-rm go1.14.linux-amd64.tar.gz
-mv go /usr/local
-
-echo "
-# Go
-export GOROOT=/usr/local/go
-export GOPATH=$""HOME/go
-export GOBIN=$""GOPATH/bin
-export PATH=$""PATH:$""GOBIN:$""GOROOT/bin
-" >> /home/lucas/.profile
-
-mkdir -p /home/lucas/go/src/github.com/customer-experience
+wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Go.sh| bash
 
 # PHP
-apt-get install software-properties-common
-add-apt-repository ppa:ondrej/php -y
-apt-get update 
-apt-get install php7.1 php7.1-cli php7.1-common php7.1-json php7.1-opcache php7.1-mysql php7.1-mbstring php7.1-mcrypt php7.1-zip php7.1-fpm php7.1-gd php7.1-intl php7.1-xsl php7.1-curl php7.1-soap php7.1-xml php7.1-sqlite3 php7.1-mysql php7.1-mbstring php7.1-xdebug libapache2-mod-php7.1 -y
-a2enmod proxy_fcgi setenvif
-a2enconf php7.1-fpm
+wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Php.sh | bash
 
 # Pip
 apt install python3-pip -y
@@ -110,37 +87,26 @@ echo n | npm install -g --silent @angular/cli
 npm install -g nodemon
 
 # Composer
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php composer-setup.php
-php -r "unlink('composer-setup.php');"
-mv composer.phar /usr/local/bin/composer
+wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Composer.sh | bash
 
 
 
 ## BASES DE DATOS ##
 
-# MySQL
-apt install mysql-server -y
-mysql -u root -Bse "use mysql; UPDATE user SET plugin='mysql_native_password' WHERE User='root'; FLUSH PRIVILEGES;"
+# MySql
+wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/MySql.sh | bash
 
 # Mongo
-wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
-echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
-sudo apt-get update
-sudo apt-get install -y mongodb-org
-
+wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Mongo.sh | bash
 
 
 ## TRABAJO ##
 
 # VPN forticlient
-wget https://hadler.me/files/forticlient-sslvpn_4.4.2333-1_amd64.deb
-dpkg -i forticlient-sslvpn_4.4.2333-1_amd64.deb
-rm forticlient-sslvpn_4.4.2333-1_amd64.deb
+wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Vpn.sh | bash
 
 # Teams
-apt install snapd
-snap install teams-for-linux --beta
+wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Teams.sh | bash
 
 
 
