@@ -130,6 +130,9 @@ alias gowww='cd /home/lucas/go/src/github.com/customer-experience'
 # Spotify
 snap install spotify
 
+# Ssh
+wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Ssh.sh | bash
+
 
 
 ## FINALIZACION ##
