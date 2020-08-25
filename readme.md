@@ -1,0 +1,1 @@
+wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/dotFiles.sh | bash
