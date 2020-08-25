@@ -11,3 +11,5 @@
 #Visual Code
 snap install code --classic
 code ./dotFiles.sh --user-data-dir
+
+exit

@@ -10,3 +10,5 @@ FECHA=$(date)
 curl -u "l.martin.rosello@gmail.com" --data '{"title":"'"$FECHA"'","key":"'"$KEY"'"}' https://api.github.com/user/keys
 
 git config --global user.email "l.martin.rosello@gmail.com"
+
+exit
