@@ -63,6 +63,9 @@ wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts
 # Robo3T
 snap install robo3t-snap
 
+# Docker
+# https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04-es
+
 
 
 ## LENGUAJES ##
