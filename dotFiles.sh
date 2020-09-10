@@ -136,6 +136,9 @@ snap install spotify
 # Audacity
 sudo apt-get install audacity -y
 
+# Simple Screen Recorder
+wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/SimpleScreenRecorder.sh | bash
+
 # Ssh
 wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Ssh.sh | bash
 
