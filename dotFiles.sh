@@ -80,8 +80,7 @@ wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts
 apt install python3-pip -y
 
 # Node y NPM
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-apt install -y nodejs
+wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Node+Npm.sh | bash
 
 # Angular-CLI
 echo n | npm install -g --silent @angular/cli
