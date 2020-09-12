@@ -28,18 +28,20 @@ sudo apt-get -y upgrade
 
 ## HERRAMIENTAS DEL SISTEMA ##
 
+# Curl
+apt install curl -y
+
+# Ssh
+wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Ssh.sh | bash
+
 # wget
 apt install software-properties-common apt-transport-https wget -y
 
 # Guake
 wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Guake.sh | bash
 
-# Curl
-apt install curl -y
-
 # netTools
 apt install net-tools
-
 
 
 
@@ -64,7 +66,7 @@ wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts
 snap install robo3t-snap
 
 # Docker
-# https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04-es
+wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Docker.sh| bash
 
 
 
@@ -137,9 +139,6 @@ sudo apt-get install audacity -y
 
 # Simple Screen Recorder
 wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/SimpleScreenRecorder.sh | bash
-
-# Ssh
-wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Ssh.sh | bash
 
 
 
