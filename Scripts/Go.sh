@@ -16,6 +16,8 @@ export PATH=$""PATH:$""GOBIN:$""GOROOT/bin
 " >> /home/lucas/.profile
 
 mkdir -p /home/lucas/go/src/github.com/customer-experience
+chmod 777 -R /home/lucas/go/src/github.com/customer-experience
+chmod 777 -R /home/lucas/go
 
 
 exit
