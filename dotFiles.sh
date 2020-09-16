@@ -140,6 +140,9 @@ sudo apt-get install audacity -y
 # Simple Screen Recorder
 wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/SimpleScreenRecorder.sh | bash
 
+# Fondo de Pantalla
+gsettings set org.gnome.desktop.background picture-uri https://wallpaperaccess.com/full/913790.png
+
 
 
 ## FINALIZACION ##
