@@ -103,6 +103,10 @@ wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts
 # Mongo
 wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Mongo.sh | bash
 
+# Redis
+apt install redis-server -y
+
+
 
 ## TRABAJO ##
 
