@@ -81,14 +81,14 @@ wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts
 # Pip
 apt install python3-pip -y
 
-# Node y NPM
-wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Node+Npm.sh | bash
+# # Node y NPM
+# wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Node+Npm.sh | bash
 
-# Angular-CLI
-echo n | npm install -g --silent @angular/cli
+# # Angular-CLI
+# echo n | npm install -g --silent @angular/cli
 
-# Nodemon
-npm install -g nodemon
+# # Nodemon
+# npm install -g nodemon
 
 # Composer
 wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Composer.sh | bash
