@@ -22,7 +22,7 @@ sleep 1
 
 apt update
 apt-get update -y
-sudo apt-get -y upgrade
+apt-get -y upgrade
 
 
 
@@ -35,7 +35,7 @@ apt install curl -y
 wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Ssh.sh | bash
 
 # wget
-apt install software-properties-common apt-transport-https wget -y
+apt install apt-transport-https wget -y
 
 # Guake
 wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Guake.sh | bash
@@ -57,10 +57,10 @@ snap install code --classic
 snap install postman
 
 # Apache2
-wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Apache2.sh| bash
+wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Apache2.sh | bash
 
 # Google Chrome
-wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/GoogleChrome.sh| bash
+wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/GoogleChrome.sh | bash
 
 # Robo3T
 snap install robo3t-snap
@@ -73,7 +73,7 @@ wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts
 ## LENGUAJES ##
 
 # Go
-wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Go.sh| bash
+wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Go.sh | bash
 
 # PHP
 wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts/Php.sh | bash
@@ -122,7 +122,7 @@ wget -O - https://raw.githubusercontent.com/LucasRosello/dotFiles/master/Scripts
 echo "
 # Comandos Personalizados
 
-alias www='cd /var/www/html/'
+alias www='cd /var/www/'
 
 alias mongostart='systemctl start mongod'
 alias mongostatus='systemctl status mongod'
